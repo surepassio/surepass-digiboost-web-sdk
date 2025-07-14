@@ -158,8 +158,9 @@ Add the SDK to your HTML page:
 ## 🖼️ Sample UI Preview
 
 Below is a sample of how the Digiboost Web SDK button  will look in your application:
+``
 
-![Digiboost Web SDK Sample UI](/assets/digilocker-flow.png)
+<img src="assets/digilocker-flow.png" alt="Sample UI" width="400" />
 
 ---
 
