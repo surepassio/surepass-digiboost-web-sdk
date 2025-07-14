@@ -91,17 +91,6 @@ curl --location 'https://kyc-api.surepass.app/api/v1/digilocker/initialize' \
 }
 ```
 
-**Custom Branding with Voice Assistant:**
-```json
-{
-    "data": {
-        "signup_flow": true,
-        "logo_url": "https://yourcompany.com/logo.png",
-        "skip_main_screen": false
-    }
-}
-```
-
 #### 1.6 API Response
 You'll receive a response like this:
 
