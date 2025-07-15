@@ -135,7 +135,7 @@ Add the SDK to your HTML page:
     <!-- Your existing content -->
     
     <!-- Include Digiboost Web SDK -->
-    <script src="https://your-cdn-url/digiboost-sdk.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/surepassio/surepass-digiboost-web-sdk@latest/index.min.js"></script>
     
     <!-- Your application scripts -->
     <script src="app.js"></script>
