@@ -387,7 +387,7 @@ onFailure: function(error) {
 }
 ```
 ---
-## 📥 Download Aadhaar API (Post-Verification)
+## 📥 Download Aadhaar XML (Post-Verification)
 
 After completing the main Digiboost Web SDK flow, you can download the user's Aadhaar XML using the following API:
 
