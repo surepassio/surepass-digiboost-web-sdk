@@ -386,6 +386,61 @@ onFailure: function(error) {
     document.getElementById("status").innerHTML = "❌ Verification failed";
 }
 ```
+---
+## 📥 Download Aadhaar API (Post-Verification)
+
+After completing the main Digiboost Web SDK flow, you can download the user's Aadhaar XML using the following API:
+
+**Request:**
+```bash
+curl --location 'https://sandbox.surepass.app/api/v1/digilocker/download-aadhaar/digilocker_CLIENT_ID' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_TOKEN' \
+```
+
+**Dummy Response:**
+```json
+{
+  "data": {
+    "client_id": "digilocker_CLIENT_ID",
+    "digilocker_metadata": {
+      "name": "John Doe",
+      "gender": "M",
+      "dob": "1990-01-01"
+    },
+    "aadhaar_xml_data": {
+      "full_name": "John Doe",
+      "care_of": "S/O Someone",
+      "dob": "1990-01-01",
+      "yob": "1990",
+      "zip": "123456",
+      "profile_image": "/9j/4AAQSk...",
+      "gender": "M",
+      "masked_aadhaar": "XXXXXXXX1234",
+      "full_address": "123 Main St, City, State, Country",
+      "father_name": "S/O Someone",
+      "address": {
+        "country": "India",
+        "dist": "Some District",
+        "state": "Some State",
+        "po": "Some PO",
+        "house": "123 Main St",
+        "loc": "Some Locality",
+        "vtc": "Some VTC",
+        "subdist": "Some Subdist",
+        "street": "Main St",
+        "landmark": "Near Landmark"
+      }
+    },
+    "xml_url": "https://aadhaar-kyc-docs.s3.amazonaws.com/.../ADHAR_XXXXXXXXXXXX.xml?..."
+  },
+  "status_code": 200,
+  "success": true,
+  "message": "Success",
+  "message_code": "success"
+}
+```
+
 
 ---
 
