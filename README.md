@@ -454,18 +454,8 @@ Add the **webhook_url** field in your payload:
 ```json
 {
   "data": {
-    "prefill_options": {
-      "full_name": "r",
-      "mobile_number": "",
-      "user_email": "r"
-    },
     "webhook_url": "https://webhook.site", // Your webhook endpoint
-    "expiry_minutes": 30,
-    "send_sms": true,
-    "send_email": false,
-    "verify_phone": false,
-    "verify_email": false,
-    "signup_flow": false
+    "signup_flow": true
   }
 }
 ```
