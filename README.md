@@ -441,6 +441,60 @@ curl --location 'https://sandbox.surepass.app/api/v1/digilocker/download-aadhaar
 }
 ```
 
+---
+
+## 🔔 Webhook URL Support
+
+You can receive real-time status updates by passing a webhook URL in the Digilocker Init API. Here’s how:
+
+### 1. Pass Webhook URL in Init API
+
+Add the **webhook_url** field in your payload:
+
+```json
+{
+  "data": {
+    "prefill_options": {
+      "full_name": "r",
+      "mobile_number": "",
+      "user_email": "r"
+    },
+    "webhook_url": "https://webhook.site", // Your webhook endpoint
+    "expiry_minutes": 30,
+    "send_sms": true,
+    "send_email": false,
+    "verify_phone": false,
+    "verify_email": false,
+    "signup_flow": false
+  }
+}
+```
+
+### 2. Receive Webhook Payload
+
+After Aadhaar verification, your webhook will receive a payload like:
+
+```json
+{
+  "client_id": "digilocker_lbsfmoudALfjHnrowLCI",
+  "status": "success",
+  "type": "digilocker"
+}
+```
+
+### 3. Download Aadhaar API
+
+Use the client_id from the webhook to download Aadhaar XML:
+
+```bash
+curl --location 'https://kyc-api.surepass.app/api/v1/digilocker/download-aadhaar/digilocker_lbsfmoudALfjHnrowLCI' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <TOKEN>'
+```
+
+---
+
+This gives your users a way to get instant status updates and trigger backend flows. Add this section after the "Download Aadhaar XML" section or wherever you see fit. Let me know if you want it in a different spot or with more/less detail.
 
 ---
 
